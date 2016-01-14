@@ -1,0 +1,1 @@
+![alt tag](https://raw.github.com/ladiesofcode/ladiesofcode.com/branch/dist/assets/LoC_Animated_Colour.gif)
