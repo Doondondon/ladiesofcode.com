@@ -2,3 +2,19 @@ body {
   background-color: #fff;
   border-radius: 100%;
 }
+
+.font-bb {
+  font-family: "BrandonGrotesque";
+}
+
+.font-bb-light {
+  font-family: "BrandonGrotesque-light";
+}
+
+.font-bb-med {
+  font-family: "BrandonGrotesque-medium";
+}
+
+.btn-red {
+  background-color: #E53334;
+}

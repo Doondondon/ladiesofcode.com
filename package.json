@@ -6,12 +6,12 @@
   "scripts": {
     "watch:js": "watch 'npm run build:js' src/js/",
     "watch:css": "watch 'npm run build:css' src/css/",
-    "watch:img": "watch 'npm run build:css' src/img/",
-    "watch": "npm run watch:js & npm run watch:css & npm run watch:img",
-    "build:css": "mkdir -p dist/css && cp node_modules/basscss/css/basscss.min.css dist/css/ && postcss --use autoprefixer -b 'last 2 versions' < src/css/app.css | cssmin > dist/css/app.min.css",
-    "build:img": "mkdir -p dist && cp -r src/img dist/img",
+    "watch:assets": "watch 'npm run build:css' src/assets/",
+    "watch": "npm run watch:js & npm run watch:css & npm run watch:assets",
+    "build:css": "mkdir -p dist/css && cp node_modules/basscss/css/basscss.min.css dist/css/ && cat src/css/*.css | postcss --use postcss-cssnext -b 'last 2 versions' | cssmin > dist/css/app.min.css",
+    "build:assets": "mkdir -p dist/assets && cp -r src/assets/ dist/assets",
     "build:js": "mkdir -p dist/js && NODE_ENV=production browserify src/js/app.js -o dist/js/app.min.js",
-    "build": "npm run build:js & npm run build:css & npm run build:img",
+    "build": "npm run build:js & npm run build:css & npm run build:assets",
     "build:clean": "rm -dr dist/",
     "serve": "live-server",
     "start": "npm run watch & npm run serve"
@@ -26,6 +26,7 @@
     "envify": "^3.4.0",
     "live-server": "^0.9.0",
     "postcss-cli": "^2.3.3",
+    "postcss-cssnext": "^2.4.0",
     "uglifyify": "^3.0.1",
     "watch": "^0.17.1",
     "watchify": "^3.7.0"
