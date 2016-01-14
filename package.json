@@ -1,0 +1,38 @@
+{
+  "name": "ladiesofcode.com",
+  "version": "1.0.0",
+  "description": "loc splash screen",
+  "main": "index.js",
+  "scripts": {
+    "watch:js": "watch 'npm run build:js' src/js/",
+    "watch:css": "watch 'npm run build:css' src/css/",
+    "watch:img": "watch 'npm run build:css' src/img/",
+    "watch": "npm run watch:js & npm run watch:css & npm run watch:img",
+    "build:css": "mkdir -p dist/css && cp node_modules/basscss/css/basscss.min.css dist/css/ && postcss --use autoprefixer -b 'last 2 versions' < src/css/app.css | cssmin > dist/css/app.min.css",
+    "build:img": "mkdir -p dist && cp -r src/img dist/img",
+    "build:js": "mkdir -p dist/js && NODE_ENV=production browserify src/js/app.js -o dist/js/app.min.js",
+    "build": "npm run build:js & npm run build:css & npm run build:img",
+    "build:clean": "rm -dr dist/",
+    "serve": "live-server",
+    "start": "npm run watch & npm run serve"
+  },
+  "author": "Chris Waring",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "basscss": "^7.1.0",
+    "browserify": "^13.0.0",
+    "cssmin": "^0.4.3",
+    "envify": "^3.4.0",
+    "live-server": "^0.9.0",
+    "postcss-cli": "^2.3.3",
+    "uglifyify": "^3.0.1",
+    "watch": "^0.17.1",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      "uglifyify"
+    ]
+  }
+}
