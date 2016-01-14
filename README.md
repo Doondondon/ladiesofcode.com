@@ -3,9 +3,10 @@
 Install
 ---
 Install the latest [NodeJS](https://nodejs.org/) then run these commands
-```
+```sh
 npm install && npm run build
-npm serve
+# Then start your development session
+npm start
 ```
 
 ---
