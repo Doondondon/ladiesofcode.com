@@ -54,7 +54,7 @@ const renderEvents = data => {
     a.href = event.event_url;
     a.innerHTML = `${event.name}`;
     li.className = "col-4 p2 border-box border m4";
-    span.innerHTML = `<h3>${showDate(event.time)}</h2><p>Venue: ${event.venue ? `<a href="${mapLink(event.venue)}">${event.venue.name}</a>` : 'TBC'}</p>`;
+    span.innerHTML = `<h3>${showDate(event.time)}</h2><p>Venue: ${event.venue ? `<a href="${mapLink(event.venue)}">${event.venue.name}</a><p>City: ${event.venue.city}</p>` : 'TBC'}</p>`;
 
     append(div, span)
     append(div, a);
