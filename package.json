@@ -19,17 +19,17 @@
   "author": "Chris Waring",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.2.3",
-    "basscss": "^7.1.0",
-    "browserify": "^13.0.0",
+    "autoprefixer": "^7.2.5",
+    "basscss": "^8.0.3",
+    "browserify": "^15.2.0",
     "cssmin": "^0.4.3",
-    "envify": "^3.4.0",
-    "live-server": "^0.9.0",
-    "postcss-cli": "^2.3.3",
-    "postcss-cssnext": "^2.4.0",
-    "uglifyify": "^3.0.1",
-    "watch": "^0.17.1",
-    "watchify": "^3.7.0"
+    "envify": "^4.1.0",
+    "live-server": "^1.2.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.1.0",
+    "uglifyify": "^4.0.5",
+    "watch": "^1.0.2",
+    "watchify": "^3.10.0"
   },
   "browserify": {
     "transform": [
