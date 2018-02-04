@@ -16,23 +16,27 @@ body {
 }
 
 .btn-red {
-  background-color: #E53334;
+  background-color: #e53334;
 }
 
 .white {
-	color: #fff;
+  color: #fff;
 }
 
 input[type="text"],
 input[type="email"] {
-	border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a {
-    color: #0074d9;
-    text-decoration: none;
+  color: #0074d9;
+  text-decoration: none;
+}
+
+p {
+  display: block;
 }
